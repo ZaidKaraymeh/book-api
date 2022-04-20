@@ -21,6 +21,6 @@ from api.models import CustomObtainToken
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("api/", include('api.urls')),
-    path('api-token-auth/', auth_views.obtain_auth_token)
+    path('api-token-auth/', CustomObtainToken.as_view())
 
 ]
